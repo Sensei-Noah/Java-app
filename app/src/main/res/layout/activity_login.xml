@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".MainActivity">
+    tools:context=".Login">
 
     <TextView
         android:layout_width="match_parent"
@@ -58,17 +58,22 @@
             android:text="Remember Me"
             />
 
-        <com.google.android.material.button.MaterialButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/loginbtn"
-            android:layout_below="@id/login_remember_me"
-            android:text="LOGIN"
-            android:backgroundTint="@color/design_default_color_secondary"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="20dp"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_remember_me"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
 
-            />
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/design_default_color_secondary"
+        android:text="LOGIN"
+        android:textSize="15dp"
+        />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

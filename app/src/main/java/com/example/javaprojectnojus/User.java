@@ -24,10 +24,12 @@ public class User {
     }
 
     public String getUsernameForRegistration(){
+
         return this.usernameRegister;
     }
 
     public String getUsernameForLogin(){
+
         return this.sharedPrefs.getString(USERNAME_KEY, "");
     }
 
@@ -40,30 +42,36 @@ public class User {
     }
 
     public String getPasswordForLogin(){
+
         return this.sharedPrefs.getString(PASSWORD_KEY, "");
     }
 
-    public void  setPasswordForLogin(){
+    public void  setPasswordForLogin(String password2){
         this.sharedPrefs.edit().putString(PASSWORD_KEY, password).commit();
     }
 
     public String getPasswordForRegistration(){
+
         return this.password;
     }
 
     public void setPasswordForRegistration(String password){
+
         this.password = password;
     }
 
     public String getEmail(){
+
         return this.email;
     }
 
     public void setEmail(String email){
+
         this.email = email;
     }
 
     public boolean isRemembered(){
+
         return this.sharedPrefs.getBoolean(REMEMBER_ME_KEY, false);
     }
 
