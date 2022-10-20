@@ -24,11 +24,12 @@ public class Login extends AppCompatActivity {
 
 
         login();
+        register();
     }
 
 
     private boolean isValid(String credentials){
-        final String CREDENTIALS_PATTERN = "^[a-zA-Z0-9]{3,15}+$";
+        final String CREDENTIALS_PATTERN = "^[a-zA-Z0-9]{3,20}+$";
 
         Pattern pattern = Pattern.compile(CREDENTIALS_PATTERN);
 
@@ -39,6 +40,19 @@ public class Login extends AppCompatActivity {
     public void openMainPage(){
         Intent mainActivity = new Intent(this, MainPage.class);
         startActivity(mainActivity);
+    }
+
+    public void openRegisterPage(){
+        Intent registerActivity = new Intent(this, Register.class);
+        startActivity(registerActivity);
+    }
+
+    private void register(){
+        MaterialButton registerbtn =(MaterialButton) findViewById(R.id.registerbtn);
+
+        registerbtn.setOnClickListener(view -> {
+            openRegisterPage();
+        });
     }
 
     private void login(){
@@ -78,6 +92,7 @@ public class Login extends AppCompatActivity {
                 view = password;
                 cancel = true;
             }
+
             if(cancel){
                 view.requestFocus();
             }else{
