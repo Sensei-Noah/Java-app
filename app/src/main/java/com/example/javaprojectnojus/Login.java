@@ -38,7 +38,7 @@ public class Login extends AppCompatActivity {
         return matcher.matches();
     }
     public void openMainPage(){
-        Intent mainActivity = new Intent(this, MainPage.class);
+        Intent mainActivity = new Intent(this, SearchActivity.class);
         startActivity(mainActivity);
     }
 
